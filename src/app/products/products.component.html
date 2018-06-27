@@ -1,0 +1,26 @@
+<!-- <h3>Formatting with Pipes</h3> -->
+<h2>Product page</h2>
+<p>Name: {{product.name | uppercase}}
+   Price: {{product.price | number: '1.2-2'}}
+</p>
+
+<!-- <h3>Two way data binding - Form Module</h3> -->
+<div>
+	<input [(ngModel)]="product.name">
+		{{product.name}}
+		{{product.price}}
+</div>
+<!-- 
+<h3>List - Retrieving List using *ngFor</h3> -->
+<ul>
+	<li class="product" [class.selected]="selectedProduct && selectedProduct.name === product.name" *ngFor="let product of products" (click)="productSelected(product)">
+		<input [(ngModel)]="product.name">
+		{{product.name}}
+		{{product.price}}
+	</li>
+</ul>
+
+<app-product-detail [product]=selectedProduct></app-product-detail>
+
+
+		
