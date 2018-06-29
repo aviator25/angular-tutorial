@@ -1,17 +1,54 @@
+
+<!--Bootstrap Table-->
+
+<table class="table">
+  <thead>
+    <tr [(ngModel)]="product.name" >
+      <th scope="col">#</th>
+      <th scope="col">Item</th>
+      <th scope="col">Price</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody >
+    <tr class="product" [class.selected]="selectedProduct && selectedProduct.name === product.name" *ngFor="let product of products" (click)="productSelected(product)">
+      <th scope="row">1</th>
+      <td>{{product.name}}</td>
+      <td>{{product.price}}</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<!-- get Api code below -->
+
 <!-- <h3>Formatting with Pipes</h3> -->
-<h2>Product page</h2>
+<!-- <h2>Product page</h2>
 <p>Name: {{product.name | uppercase}}
    Price: {{product.price | number: '1.2-2'}}
-</p>
+</p> -->
 
 <!-- <h3>Two way data binding - Form Module</h3> -->
-<div>
+<!-- <div>
 	<input [(ngModel)]="product.name">
 		{{product.name}}
 		{{product.price}}
 </div>
-<!-- 
-<h3>List - Retrieving List using *ngFor</h3> -->
+ -->
+<!-- <h3>List - Retrieving List using *ngFor</h3>
 <ul>
 	<li class="product" [class.selected]="selectedProduct && selectedProduct.name === product.name" *ngFor="let product of products" (click)="productSelected(product)">
 		<input [(ngModel)]="product.name">
@@ -19,6 +56,8 @@
 		{{product.price}}
 	</li>
 </ul>
+ -->
+
 
 <app-product-detail [product]=selectedProduct></app-product-detail>
 

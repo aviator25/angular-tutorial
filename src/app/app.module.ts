@@ -10,6 +10,8 @@ import { ProductsService } from './products.service';
 import { AppRoutingModule } from './/app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component'
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 
 
@@ -19,6 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     ProductsComponent,
     ProductDetailComponent,
     DashboardComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
