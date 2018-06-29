@@ -12,6 +12,7 @@ import { DashboardComponent } from './dashboard/dashboard.component'
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { AddProductsComponent } from './add-products/add-products.component';
 
 
 
@@ -23,12 +24,14 @@ import { RegisterComponent } from './register/register.component';
     DashboardComponent,
     LoginComponent,
     RegisterComponent,
+    AddProductsComponent,
+
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [ProductsService],
   bootstrap: [AppComponent]

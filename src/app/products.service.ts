@@ -30,6 +30,9 @@ export class ProductsService {
     return this.http.get(this.productApi)
   }
 
+  addProducts(product){
+  	return this.http.post(this.productApi,product)
+  }
   
 
 }

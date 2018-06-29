@@ -1,0 +1,22 @@
+<div id="add-form" style="text-align:center">
+	
+  <div class="form-group">
+    <label for="exampleInputEmail1">Product Name</label>
+    <input [(ngModel)]="product.name" type="text" class="form-control"  placeholder="Enter Name">
+   
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Packaging</label>
+    <input [(ngModel)]="product.packaging" type="text" class="form-control"  placeholder="Enter Packaging">
+  </div>
+   <div class="form-group">
+    <label for="exampleInputPassword1">Price</label>
+    <input [(ngModel)]="product.price" type="text" class="form-control"  placeholder="Enter Price">
+  </div>
+  <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button (click)="saveProduct()" type="submit" class="btn btn-primary">Submit</button>
+
+</div>
